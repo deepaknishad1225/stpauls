@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Character Encoding for proper text rendering -->
+    <meta charset="UTF-8">
+
+    <!-- Ensures responsive scaling across devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title (Important for SEO ranking and browser tab identity) -->
+    <title>NAVBAR</title>
+
+    <!-- Primary Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Responsive Styles for Tablet View (max-width: 800px) -->
+    <link rel="stylesheet" href="max-width 800.css">
+
+    <!-- Responsive Styles for Mobile View (max-width: 600px) -->
+    <link rel="stylesheet" href="max-width 600.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         MAIN NAVIGATION SECTION
+         Semantic <nav> improves SEO and accessibility
+    ========================== -->
+    <nav>
+
+        <!-- Logo and School Branding Container -->
+        <div class="nav-logo-name">
+
+            <!-- Clickable School Logo (Home Redirect Placeholder) -->
+            <a href="#">
+                <img src="logo of nav.jpeg" alt="School Logo" class="nav-logo">
+            </a>
+
+            <!-- Full School Name (Displayed in Desktop View) -->
+            <a href="#">
+                <span class="nav-name">St. Paul's Eng. Med. Hr. Sec. School</span>
+            </a>
+
+            <!-- Short School Name (Displayed in Responsive Views) -->
+            <a href="#">
+                <span class="nav-short-name">St. Paul's School</span>
+            </a>
+
+        </div>
+
+        <!-- Primary Navigation Links -->
+        <ul>
+
+            <!-- Home Link -->
+            <li>
+                <a href="#" class="desktop-navbar-links">Home</a>
+            </li>
+
+            <!-- About Us Section with Dropdown -->
+            <li>
+                <a href="#" class="desktop-navbar-links">About Us ▾</a>
+
+                <!-- About Dropdown Menu -->
+                <ul class="about-dropdown">
+                    <li><a href="#" class="about-dropdown-links">Overview</a></li>
+                    <li><a href="#" class="about-dropdown-links">School Profile</a></li>
+                    <li><a href="#" class="about-dropdown-links">Leadership</a></li>
+                    <li><a href="#" class="about-dropdown-links">Faculty & Staff</a></li>
+                    <li><a href="#" class="about-dropdown-links">Infrastructure</a></li>
+                </ul>
+            </li>
+
+            <!-- Academics Section with Dropdown -->
+            <li>
+                <a href="#" class="desktop-navbar-links">Academics ▾</a>
+
+                <!-- Academics Dropdown Menu -->
+                <ul class="academics-dropdown">
+                    <li><a href="#" class="academics-dropdown-links">Admission</a></li>
+                    <li><a href="#" class="academics-dropdown-links">Timetable</a></li>
+                    <li><a href="#" class="academics-dropdown-links">Result</a></li>
+                    <li><a href="#" class="academics-dropdown-links">Book List</a></li>
+                    <li><a href="#" class="academics-dropdown-links">School Uniform</a></li>
+                    <li><a href="#" class="academics-dropdown-links">Notices & Events</a></li>
+                </ul>
+            </li>
+
+            <!-- Students Life Section with Dropdown -->
+            <li>
+                <a href="#" class="desktop-navbar-links">Students Life ▾</a>
+
+                <!-- Students Life Dropdown Menu -->
+                <ul class="studentslife-dropdown">
+                    <li><a href="#" class="studentslife-dropdown-links">School Timing</a></li>
+                    <li><a href="#" class="studentslife-dropdown-links">House System</a></li>
+                </ul>
+            </li>
+
+            <!-- Contact Page Link -->
+            <li>
+                <a href="#" class="desktop-navbar-links">Contact Us</a>
+            </li>
+
+        </ul>
+
+        <!-- =========================
+             MOBILE NAVIGATION SYSTEM
+             Hamburger + Sidebar Pattern
+        ========================== -->
+
+        <!-- Hamburger Icon (Triggers Sidebar Toggle Function) -->
+        <div class="hamburger" onclick="toggleSidebar()">
+            ☰
+        </div>
+
+        <!-- Mobile Sidebar Container -->
+        <div class="mobile-sidebar" id="sidebar">
+
+            <!-- Close Button for Sidebar -->
+            <span class="close-btn" onclick="toggleSidebar()">✖</span>
+
+            <!-- Mobile Home Link -->
+            <a href="#">Home</a>
+
+            <!-- Mobile About Dropdown -->
+            <div class="mobile-dropdown">
+                <span>About Us ▾</span>
+
+                <!-- Nested Mobile Submenu -->
+                <div class="mobile-submenu">
+                    <a href="#">Overview</a>
+                    <a href="#">School Profile</a>
+                    <a href="#">Leadership</a>
+                    <a href="#">Faculty & Staff</a>
+                    <a href="#">Infrastructure</a>
+                </div>
+            </div>
+
+            <!-- Mobile Academics Dropdown -->
+            <div class="mobile-dropdown">
+                <span>Academics ▾</span>
+
+                <div class="mobile-submenu">
+                    <a href="#">Admission</a>
+                    <a href="#">Timetable</a>
+                    <a href="#">Result</a>
+                    <a href="#">Book List</a>
+                    <a href="#">School Uniform</a>
+                    <a href="#">Notices & Events</a>
+                </div>
+            </div>
+
+            <!-- Mobile Students Life Dropdown -->
+            <div class="mobile-dropdown">
+                <span>Students Life ▾</span>
+
+                <div class="mobile-submenu">
+                    <a href="#">School Timing</a>
+                    <a href="#">House System</a>
+                </div>
+            </div>
+
+            <!-- Mobile Contact Link -->
+            <a href="#">Contact Us</a>
+        </div>
+
+        <!-- Overlay Background (Closes Sidebar When Clicked) -->
+        <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+    </nav>
+
+    <!-- External JavaScript File -->
+    <!-- Loaded at bottom for better performance and DOM readiness -->
+    <script src="script.js"></script>
+
+</body>
+</html>

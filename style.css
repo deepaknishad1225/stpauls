@@ -1,0 +1,265 @@
+/* ==========================================================
+   ROOT VARIABLES (Design System)
+   Centralized color palette for consistency and maintainability
+   ========================================================== */
+
+:root {
+    --navbar: rgb(254, 254, 254);   
+    --body: #E8F5E9;               
+    --footer: linear-gradient(135deg, #2d6a4f, #40916c);
+    --hover-green: #76c893;
+    --text-black: #1B1B1B;
+    --text-white: #FFFFFF;
+}
+
+
+/* ==========================================================
+   GLOBAL RESET
+   Removes default browser spacing and ensures predictable sizing
+   ========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   BASE BODY STYLING
+   Sets typography, background, and minimum viewport height
+   ========================================================== */
+
+body {
+    min-height: 100vh;
+    color: var(--text-black);
+    background-color: var(--body);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* ==========================================================
+   NAVBAR CONTAINER
+   Sticky positioning ensures persistent top navigation
+   High z-index keeps navbar above other content
+   ========================================================== */
+
+nav {
+    background: var(--navbar);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    color: var(--text-black);
+}
+
+
+/* ==========================================================
+   LOGO & BRANDING SECTION
+   Flex layout aligns logo and school name horizontally
+   ========================================================== */
+
+.nav-logo-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo-name a {
+    text-decoration: none;
+    color: var(--text-black);
+}
+
+.nav-logo {
+    height: 45px;
+    transform: scale(1.25); /* Slight visual enhancement */
+}
+
+.nav-name {
+    font-size: 27px;
+    font-weight: 520px; /* Custom weight (browser fallback applies if unsupported) */
+}
+
+.nav-short-name {
+    display: none; /* Activated in responsive layouts */
+}
+
+
+/* ==========================================================
+   DESKTOP NAVIGATION LINKS
+   ========================================================== */
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.desktop-navbar-links {
+    text-decoration: none;
+    color: var(--text-black);
+    font-weight: 500;
+    position: relative;
+    font-size: 19px;
+    padding: 10px 22px;
+}
+
+/* Hover Interaction for Desktop Links */
+.desktop-navbar-links:hover {
+    background-color: var(--hover-green);
+    color: var(--text-white);
+    border-radius: 8px;
+}
+
+
+/* Parent list item must remain relative 
+   to correctly position absolute dropdown menus */
+nav ul li {
+    position: relative;
+}
+
+
+/* ==========================================================
+   DROPDOWN MENUS (Desktop)
+   Initially hidden and revealed via hover logic (CSS/JS)
+   ========================================================== */
+
+.about-dropdown,
+.academics-dropdown,
+.studentslife-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--navbar);
+    display: none;
+    flex-direction: column;
+    width: 150px;
+    border-radius: 10px;
+    padding: 10px 0px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Dropdown Links */
+.about-dropdown-links,
+.academics-dropdown-links,
+.studentslife-dropdown-links {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text-black);
+    font-size: 16px;
+}
+
+/* Hover Effect for Dropdown Items */
+.about-dropdown-links:hover,
+.academics-dropdown-links:hover,
+.studentslife-dropdown-links:hover {
+    background-color: var(--hover-green);
+    color: var(--text-white);
+    border-radius: 8px;
+}
+
+
+/* ==========================================================
+   MOBILE NAVIGATION SYSTEM
+   Hidden on Desktop, Activated via Media Query
+   ========================================================== */
+
+/* Hamburger Icon (Visible Only on Smaller Screens) */
+.hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+
+/* Mobile Sidebar Panel */
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden off-screen by default */
+    width: 250px;
+    height: 100%;
+    background: var(--navbar);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: 0.3s ease; /* Smooth slide-in animation */
+    z-index: 2000;
+}
+
+
+/* Mobile Links & Dropdown Headers */
+.mobile-sidebar a,
+.mobile-dropdown span {
+    text-decoration: none;
+    color: var(--text-black);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Hover Effect (Mobile) */
+.mobile-sidebar a:hover,
+.mobile-dropdown span:hover {
+    background-color: var(--hover-green);
+    color: var(--text-white);
+    border-radius: 8px;
+}
+
+
+/* Sidebar Close Button */
+.close-btn {
+    align-self: flex-start;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+
+/* ==========================================================
+   MOBILE DROPDOWN SUBMENU
+   Toggled using JS by adding/removing .active class
+   ========================================================== */
+
+.mobile-submenu {
+    display: none;
+    flex-direction: column;
+    margin: 10px 0px 0px 15px;
+    gap: 10px;
+}
+
+.mobile-dropdown.active .mobile-submenu {
+    display: flex;
+}
+
+
+/* ==========================================================
+   OVERLAY (Background Dim Effect)
+   Prevents interaction with main content when sidebar is open
+   ========================================================== */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    z-index: 1500;
+}
+
+
+/* Sidebar Visible State */
+.mobile-sidebar.active {
+    right: 0;
+}
+
+/* Overlay Visible State */
+.overlay.active {
+    display: block;
+}

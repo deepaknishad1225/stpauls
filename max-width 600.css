@@ -1,0 +1,164 @@
+/* ==========================================================
+   MOBILE NAVIGATION RESPONSIVE ADJUSTMENTS
+   Fine-tuning branding, logo, and padding for small screens
+   ========================================================== */
+
+
+/* -----------------------------
+   Breakpoint: 600px
+   Slight adjustment for smaller tablets and large phones
+------------------------------ */
+@media (max-width: 600px) {
+    .nav-name {
+        font-size: 27px;
+    }
+
+    /* Mobile sidebar full width */
+    .mobile-sidebar {
+        width: 100%;
+        gap: 40px;
+    }
+}
+
+
+/* -----------------------------
+   Breakpoint: 540px
+   Moderate scaling for compact devices
+------------------------------ */
+@media (max-width: 540px) {
+    .nav-name {
+        font-size: 25px;
+    }
+
+    nav {
+        padding: 12px 15px;
+    }
+
+    .nav-logo-name {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .nav-logo {
+        height: 45px;
+        transform: scale(1.25);
+    }
+}
+
+
+/* -----------------------------
+   Breakpoint: 526px
+   Minor adjustments for smaller mobile widths
+------------------------------ */
+@media (max-width: 526px) {
+    .nav-name {
+        font-size: 23px;
+    }
+
+    nav {
+        padding: 11.5px 14.5px;
+    }
+
+    .nav-logo-name {
+        gap: 11.5px;
+    }
+
+    .nav-logo {
+        height: 44.5px;
+        transform: scale(1.22);
+    }
+}
+
+
+/* -----------------------------
+   Breakpoint: 482px
+   Further scaling for small phones
+------------------------------ */
+@media (max-width: 482px) {
+    .nav-name {
+        font-size: 21px;
+    }
+
+    nav {
+        padding: 11px 14px;
+    }
+
+    .nav-logo-name {
+        gap: 10.5px;
+    }
+
+    .nav-logo {
+        height: 44.5px;
+        transform: scale(1.2);
+    }
+}
+
+
+/* -----------------------------
+   Breakpoint: 450px
+   Extra small phone adjustments
+------------------------------ */
+@media (max-width: 450px) {
+    .nav-name {
+        font-size: 18px;
+    }
+
+    nav {
+        padding: 11px 13px;
+    }
+
+    .nav-logo-name {
+        gap: 10.5px;
+    }
+
+    .nav-logo {
+        height: 42px;
+        transform: scale(1.2);
+    }
+}
+
+
+/* -----------------------------
+   Breakpoint: 398px
+   Very small screens (compact phones)
+------------------------------ */
+@media (max-width: 398px) {
+    .nav-name {
+        font-size: 15px;
+    }
+
+    nav {
+        padding: 9px 13px;
+    }
+
+    .nav-logo-name {
+        gap: 10.5px;
+    }
+
+    .nav-logo {
+        height: 40px;
+        transform: scale(1.2);
+    }
+}
+
+
+/* -----------------------------
+   Breakpoint: 342px
+   Extra small devices, hide full school name
+------------------------------ */
+@media (max-width: 342px) {
+    .nav-name {
+        display: none; /* Hide full name */
+    }
+
+    .nav-short-name {
+        display: flex; /* Show abbreviated name */
+        font-size: 21px;
+        font-weight: 520px;
+    }
+
+    .nav-logo-name {
+        gap: 5px;
+    }
+}

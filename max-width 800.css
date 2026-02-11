@@ -1,0 +1,206 @@
+/* ==========================================================
+   RESPONSIVE TYPOGRAPHY & SPACING ADJUSTMENTS
+   Progressive scaling for medium-to-small desktop widths
+   ========================================================== */
+
+
+/* ----------------------------------------------------------
+   Breakpoint: 1220px
+   Slight reduction in branding and navigation sizing
+----------------------------------------------------------- */
+@media (max-width: 1220px) {
+
+    /* Navbar container spacing */
+    nav {
+        padding: 12px 15px;
+    }
+
+    /* Branding section spacing */
+    .nav-logo-name {
+        gap: 12px;
+    }
+
+    /* Logo scaling */
+    .nav-logo {
+        height: 45px;
+        transform: scale(1.25);
+    }
+
+    /* School name typography */
+    .nav-name {
+        font-size: 26px;
+    }
+
+    /* Desktop navigation links */
+    .desktop-navbar-links {
+        font-size: 18.5px;
+        padding: 9.5px 21.5px;
+    }
+}
+
+
+/* ----------------------------------------------------------
+   Breakpoint: 1168px
+   Moderate scaling adjustment for tighter layouts
+----------------------------------------------------------- */
+@media (max-width: 1168px) {
+
+    nav {
+        padding: 12px 15px;
+    }
+
+    .nav-logo-name {
+        gap: 11.5px;
+    }
+
+    .nav-logo {
+        height: 44px;
+        transform: scale(1.25);
+    }
+
+    .nav-name {
+        font-size: 24px;
+    }
+
+    .desktop-navbar-links {
+        font-size: 15px;
+        padding: 9px 21px;
+    }
+}
+
+
+/* ----------------------------------------------------------
+   Breakpoint: 1040px
+   Further compression of typography for narrower screens
+----------------------------------------------------------- */
+@media (max-width: 1040px) {
+
+    nav {
+        padding: 12px 15px;
+    }
+
+    .nav-logo-name {
+        gap: 11.5px;
+    }
+
+    .nav-logo {
+        height: 44px;
+        transform: scale(1.25);
+    }
+
+    .nav-name {
+        font-size: 22px;
+    }
+
+    .desktop-navbar-links {
+        font-size: 15px;
+        padding: 9px 15px;
+    }
+}
+
+
+/* ----------------------------------------------------------
+   Breakpoint: 952px
+   Significant reduction before tablet transition
+----------------------------------------------------------- */
+@media (max-width: 952px) {
+
+    nav {
+        padding: 12px 15px;
+    }
+
+    .nav-logo-name {
+        gap: 11.5px;
+    }
+
+    .nav-logo {
+        height: 44px;
+        transform: scale(1.25);
+    }
+
+    .nav-name {
+        font-size: 20px;
+    }
+
+    .desktop-navbar-links {
+        font-size: 13px;
+        padding: 9px 15px;
+    }
+}
+
+
+/* ----------------------------------------------------------
+   Breakpoint: 876px
+   Pre-mobile fine tuning
+----------------------------------------------------------- */
+@media (max-width: 876px) {
+
+    nav {
+        padding: 12px 14px;
+    }
+
+    .nav-logo-name {
+        gap: 11px;
+    }
+
+    .nav-logo {
+        height: 43px;
+        transform: scale(1.25);
+    }
+
+    .nav-name {
+        font-size: 19px;
+    }
+
+    .desktop-navbar-links {
+        font-size: 11.5px;
+        padding: 9px 13.5px;
+    }
+}
+
+
+/* ==========================================================
+   DROPDOWN TYPOGRAPHY SCALING
+   Keeps submenu readable at reduced widths
+   ========================================================== */
+
+
+/* Dropdown adjustments at 952px */
+@media (max-width: 952px) {
+    .about-dropdown-links,
+    .academics-dropdown-links,
+    .studentslife-dropdown-links {
+        font-size: 14px;
+        padding: 9px 16px;
+    }
+}
+
+
+/* Dropdown adjustments at 876px */
+@media (max-width: 876px) {
+    .about-dropdown-links,
+    .academics-dropdown-links,
+    .studentslife-dropdown-links {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+}
+
+
+/* ==========================================================
+   TABLET TRANSITION POINT
+   Switch from desktop navigation to mobile system
+   ========================================================== */
+
+@media (max-width: 800px) {
+
+    /* Hide horizontal navigation */
+    nav ul {
+        display: none;
+    }
+
+    /* Display hamburger menu */
+    .hamburger {
+        display: block;
+    }
+}
